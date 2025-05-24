@@ -1,0 +1,91 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+
+  "modules-center": [],
+
+  "modules-right": [
+    "custom/launcher",
+    "cpu",
+    "memory",
+    "custom/temp",
+    "custom/weather",
+    "pulseaudio",
+    "clock",
+    "network",
+    "custom/power"
+  ],
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "all-outputs": true
+  },
+
+  "hyprland/window": {
+    "max-length": 60
+  },
+
+  "network": {
+    "interval": 5,
+    "format-wifi": " {essid} ({signalStrength}%)",
+    "format-ethernet": "  Internet",
+    "format-disconnected": "Sin red",
+    "tooltip": true
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": " Silencio",
+    "tooltip": false,
+    "on-click": "pavucontrol",
+    "scroll-step": 5
+  },
+
+  "clock": {
+    "format": "🕒 {:%I:%M:%S %p  %A %d %B %Y}",
+    "tooltip": false,
+    "interval": 1
+  },
+
+  "custom/launcher": {
+    "format": "Shialeweb.Com",
+    "tooltip": "Lanzar aplicaciones",
+    "on-click": "wofi --show drun",
+    "interval": 0
+  },
+
+  "cpu": {
+    "format": "🧠 {usage}%"
+  },
+
+  "memory": {
+    "format": "📦 {used:0.1f}GB"
+  },
+
+  "custom/temp": {
+    "format": "🌡️ {}°C",
+    "exec": "sensors | awk '/Package id 0:/ {print int($4)}'",
+    "interval": 20,
+    "tooltip": false
+  },
+
+  "custom/weather": {
+    "format": "☁️ {}",
+    "exec": "curl -s 'wttr.in/?format=1'",
+    "interval": 600,
+    "tooltip": false
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": "Apagar / Reiniciar",
+    "on-click": "~/.config/wofi/power-menu.sh",
+    "interval": 0
+  }
+}
+

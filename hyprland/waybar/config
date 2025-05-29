@@ -84,7 +84,7 @@
   "custom/power": {
     "format": "⏻",
     "tooltip": "Apagar / Reiniciar",
-    "on-click": "~/.config/wofi/power-menu.sh",
+    "on-click": "shutdown now",
     "interval": 0
   }
 }

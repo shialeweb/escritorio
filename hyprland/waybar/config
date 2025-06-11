@@ -41,7 +41,8 @@
     "format-wifi": "📶 {essid} ({signalStrength}%)",
     "format-ethernet": "🔌  Internet",
     "format-disconnected": "❌ Sin red",
-    "tooltip": true
+    "tooltip": true,
+    "on-click": "reboot"
   },
 
   "pulseaudio": {
@@ -61,7 +62,7 @@
   "custom/launcher": {
     "format": "👤 Shialeweb.Com 🖥️",
     "tooltip": "Lanzar aplicaciones",
-    "on-click": "wofi --show drun",
+    "on-click": "~/.config/wofi-menus/main-menu.sh",
     "interval": 0
   },
   

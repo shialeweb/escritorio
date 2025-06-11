@@ -42,6 +42,12 @@ window#waybar {
 #pulseaudio,
 #network,
 #custom-launcher,
+#custom-youtube,
+#custom-firefox,
+#custom-discord,
+#custom-obs,
+#custom-opentoonz,
+#custom-gimp,
 #custom-temp,
 #custom-weather,
 #custom-power {
@@ -84,10 +90,89 @@ window#waybar {
   background-color: rgba(20, 20, 30, 0.8);
   box-shadow: 0 0 5px #7dcfff;
 }
+#custom-youtube {
+  padding: 0 10px;
+  margin: 0 4px;
+  border-radius: 10px;
+  border: 1px solid #ff5555; /* Rojo estilo YouTube */
+  background-color: rgba(40, 0, 0, 0.8);
+  color: #ff5555;
+  box-shadow: 0 0 6px #ff5555;
+  transition: all 0.3s ease-in-out;
+}
+
+#custom-youtube:hover {
+  color: white;
+  background-color: rgba(60, 0, 0, 0.9);
+  box-shadow: 0 0 10px #ff0000;
+}
+
 #custom-launcher:hover {
   color: #bb9af7;
   background-color: rgba(30, 30, 45, 0.9);
 }
+
+#custom-firefox,
+#custom-discord {
+  padding: 0 10px;
+  margin: 0 4px;
+  border-radius: 10px;
+  border: 1px solid #7aa2f7;
+  background-color: rgba(25, 25, 30, 0.8);
+  color: #c0caf5;
+  box-shadow: 0 0 8px #7aa2f7;
+  transition: 0.3s ease;
+}
+
+#custom-firefox:hover {
+  color: #ff9e64;
+  border-color: #ff9e64;
+  box-shadow: 0 0 10px #ff9e64;
+}
+
+#custom-discord:hover {
+  color: #7289da;
+  border-color: #7289da;
+  box-shadow: 0 0 10px #7289da;
+}
+
+#custom-obs {
+  color: #ff5555;
+  border: 1px solid #ff5555;
+  background-color: rgba(40, 10, 10, 0.8);
+  box-shadow: 0 0 8px #ff5555;
+  transition: 0.3s ease;
+}
+#custom-obs:hover {
+  color: white;
+  box-shadow: 0 0 10px #ff0000;
+}
+
+#custom-opentoonz {
+  color: #7dcfff;
+  border: 1px solid #7dcfff;
+  background-color: rgba(10, 20, 30, 0.8);
+  box-shadow: 0 0 8px #7dcfff;
+  transition: 0.3s ease;
+}
+#custom-opentoonz:hover {
+  color: #bb9af7;
+  box-shadow: 0 0 10px #bb9af7;
+}
+
+#custom-gimp {
+  color: #cba6f7;
+  border: 1px solid #cba6f7;
+  background-color: rgba(30, 20, 40, 0.8);
+  box-shadow: 0 0 8px #cba6f7;
+  transition: 0.3s ease;
+}
+#custom-gimp:hover {
+  color: #f7768e;
+  box-shadow: 0 0 10px #f7768e;
+}
+
+
 
 /* === TOOLTIP === */
 tooltip {
@@ -95,4 +180,3 @@ tooltip {
   color: #c0caf5;
   border: 1px solid #7dcfff;
 }
-

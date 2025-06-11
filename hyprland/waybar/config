@@ -8,9 +8,15 @@
   ],
 
   "modules-center": [],
-
+    
   "modules-right": [
     "custom/launcher",
+    "custom/youtube",
+    "custom/firefox",
+    "custom/discord",
+    "custom/obs",
+    "custom/opentoonz",
+    "custom/gimp",
     "cpu",
     "memory",
     "custom/temp",
@@ -32,15 +38,15 @@
 
   "network": {
     "interval": 5,
-    "format-wifi": " {essid} ({signalStrength}%)",
-    "format-ethernet": "  Internet",
-    "format-disconnected": "Sin red",
+    "format-wifi": "📶 {essid} ({signalStrength}%)",
+    "format-ethernet": "🔌  Internet",
+    "format-disconnected": "❌ Sin red",
     "tooltip": true
   },
 
   "pulseaudio": {
-    "format": " {volume}%",
-    "format-muted": " Silencio",
+    "format": "🔊 {volume}%",
+    "format-muted": "🔇 Silencio",
     "tooltip": false,
     "on-click": "pavucontrol",
     "scroll-step": 5
@@ -53,12 +59,55 @@
   },
 
   "custom/launcher": {
-    "format": "Shialeweb.Com",
+    "format": "👤 Shialeweb.Com 🖥️",
     "tooltip": "Lanzar aplicaciones",
     "on-click": "wofi --show drun",
     "interval": 0
   },
+  
+  "custom/youtube": {
+  "format": "▶️ Youtube",
+  "tooltip": "YouTube",
+    "on-click": "google-chrome-stable https://studio.youtube.com",
+    "interval": 0
+  },
 
+"custom/firefox": {
+  "format": "🌐 Firefox",
+  "tooltip": "Abrir navegador Firefox",
+  "on-click": "firefox https://studio.youtube.com",
+  "interval": 0
+  },
+
+"custom/discord": {
+  "format": "💬 Discord",
+  "tooltip": "Abrir Discord",
+  "on-click": "discord",
+  "interval": 0
+  },
+
+"custom/obs": {
+  "format": "🎥 OBS",
+  "tooltip": "Lanzar OBS Studio",
+  "on-click": "obs",
+  "interval": 0
+},
+
+"custom/opentoonz": {
+  "format": "🎨 OpenToonz",
+  "tooltip": "Abrir OpenToonz",
+  "on-click": "opentoonz",
+  "interval": 0
+},
+
+ "custom/gimp": {
+  "format": "🖌️ GIMP",
+  "tooltip": "Abrir GIMP",
+  "on-click": "gimp",
+  "interval": 0
+},
+
+  
   "cpu": {
     "format": "🧠 {usage}%"
   },
@@ -88,4 +137,3 @@
     "interval": 0
   }
 }
-

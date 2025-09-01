@@ -1,0 +1,92 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "spacing": 6,
+  "margin": 6,
+
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "custom/cpu",
+    "custom/ram",
+    "custom/temp",
+    "network",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "keyboard-state",
+    "tray",
+    "custom/power"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 40
+  },
+
+  "clock": {
+    "format": "📅 {:%A, %d %B %Y %I:%M:%S} 🕒",
+    "tooltip-format": "{:%A, %d %B %Y %I:%M:%S}",
+    "interval": 1
+  },
+
+  "custom/cpu": {
+    "format": "🖥️ CPU {}%",
+    "interval": 2,
+    "exec": "top -bn1 | awk '/Cpu/ {print 100 - $8}' || echo 0"
+  },
+
+  "custom/ram": {
+    "format": "🧠 RAM {}",
+    "interval": 3,
+    "exec": "free -h | awk '/Mem:/ {print $3 \"/\" $2}'"
+  },
+
+  "custom/temp": {
+  "format": "🌡️ TEMP {}°C",
+  "interval": 5,
+  "exec": "sensors | grep -m 1 -Eo '\\+[0-9]+\\.[0-9]°C' | tr -d '+' | cut -d'.' -f1 || echo 'N/A'"
+  },
+
+  "network": {
+    "format-wifi": "Wi-Fi {essid} {signalStrength}%",
+    "format-ethernet": "🌐 Shialeweb.Com",
+    "format-disconnected": "Sin Red"
+  },
+
+  "pulseaudio": {
+    "format": "🔊 VOL {volume}%",
+    "format-muted": "MUTE"
+  },
+
+  "backlight": {
+    "format": "☀️ {percent}%"
+  },
+
+  "battery": {
+    "format": "BAT {capacity}%",
+    "format-charging": "⚡ {capacity}%"
+  },
+
+  "keyboard-state": {
+    "format": "{layout} {capsLock}{numLock}"
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": "Apagar / Reiniciar",
+    "on-click": "wlogout --protocol layer-shell"
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 6
+  }
+}

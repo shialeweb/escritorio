@@ -1,0 +1,72 @@
+* {
+  font-family: "JetBrains Mono", "Noto Color Emoji", monospace;
+  font-size: 14px;
+  transition: background 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+window#waybar {
+  background: rgba(10, 10, 10, 0.92);
+  color: #39ff14;
+  padding: 8px 14px;
+  border-radius: 18px;
+  box-shadow: 0 0 14px rgba(57, 255, 20, 0.5);
+}
+
+/* Botones generales */
+button, #workspaces button, #custom-power {
+  background: rgba(30, 30, 30, 0.7);
+  color: #39ff14;
+  margin: 0 4px;
+  padding: 6px 16px;
+  border-radius: 14px;
+  animation: glow 3s infinite alternate;
+  border: none;
+}
+
+button:hover,
+#workspaces button:hover,
+#custom-power:hover {
+  background: rgba(57, 255, 20, 0.3);
+  box-shadow: 0 0 10px #39ff14;
+}
+
+#workspaces button.active {
+  background: rgba(57, 255, 20, 0.5);
+  box-shadow: inset 0 0 6px #39ff14;
+}
+
+/* Módulos */
+#network,
+#pulseaudio,
+#backlight,
+#battery,
+#clock,
+#keyboard-state,
+#tray,
+#custom-cpu,
+#custom-ram,
+#custom-temp {
+  background: rgba(20, 20, 20, 0.7);
+  color: #00ffff;
+  padding: 6px 14px;
+  margin: 0 4px;
+  border-radius: 14px;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+}
+
+#battery.charging {
+  color: #39ff14;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 4px rgba(57, 255, 20, 0.2); }
+  100% { box-shadow: 0 0 12px rgba(57, 255, 20, 0.8); }
+}
+
+/* Hover especial para métricas */
+#custom-cpu:hover,
+#custom-ram:hover,
+#custom-temp:hover {
+  color: #ff00ff;
+  box-shadow: 0 0 10px #ff00ff;
+}

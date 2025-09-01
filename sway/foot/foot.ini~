@@ -1,0 +1,39 @@
+[main]
+# Fuente monoespaciada grande y clara: Hack
+font=Hack:size=24
+
+[colors]
+# Fondo negro profundo y texto azul neon Arch
+background=000000
+foreground=00b7ff
+
+# Paleta hacker retro Arch Linux 💙
+regular0=000000
+regular1=ff0055
+regular2=33ff99
+regular3=ffee33
+regular4=00b7ff
+regular5=cc66ff
+regular6=00ffee
+regular7=cccccc
+
+bright0=333333
+bright1=ff3366
+bright2=66ff99
+bright3=ffff66
+bright4=33ccff
+bright5=dd99ff
+bright6=66ffff
+bright7=ffffff
+
+[bell]
+visual=yes
+urgent=no
+
+[key-bindings]
+clipboard-copy=Control+Shift+c
+clipboard-paste=Control+Shift+v
+
+[tweak]
+# Suprime warning de fuente si Foot detecta Hack como no monoespaciada
+font-monospace-warn=no

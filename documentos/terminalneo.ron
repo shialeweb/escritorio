@@ -1,0 +1,28 @@
+
+(
+    name: "Matrix Verde",
+    foreground: "#00FF41",
+    background: "#000000",
+    cursor: "#00FF41",
+    bright_foreground: "#39FF14",
+    normal: (
+        black: "#000000",
+        red: "#FF3333",
+        green: "#00FF41",
+        yellow: "#D7FF00",
+        blue: "#00AAFF",
+        magenta: "#CC66FF",
+        cyan: "#00FFD5",
+        white: "#B8FFC5",
+    ),
+    bright: (
+        black: "#333333",
+        red: "#FF6666",
+        green: "#39FF14",
+        yellow: "#EEFF55",
+        blue: "#55BBFF",
+        magenta: "#DD99FF",
+        cyan: "#66FFEE",
+        white: "#FFFFFF",
+    ),
+)

@@ -1,0 +1,262 @@
+
+---------------------------
+-- SHIALEWEB MATRIX THEME
+-- AwesomeWM / Fedora
+---------------------------
+
+local theme_assets = require("beautiful.theme_assets")
+local xresources = require("beautiful.xresources")
+local rnotification = require("ruled.notification")
+local dpi = xresources.apply_dpi
+
+local gfs = require("gears.filesystem")
+local themes_path = gfs.get_themes_dir()
+
+local theme = {}
+
+-- ==========================================
+-- TIPOGRAFIA
+-- ==========================================
+
+theme.font = "sans 9"
+
+-- ==========================================
+-- PALETA MATRIX
+-- ==========================================
+
+local black       = "#030803"
+local dark        = "#050a05"
+local dark_green  = "#101810"
+local green       = "#00cc44"
+local neon        = "#39ff14"
+local bright      = "#00ff66"
+local muted       = "#007a29"
+local focus       = "#003b16"
+local red         = "#ff0033"
+local white       = "#ffffff"
+
+-- ==========================================
+-- FONDOS Y TEXTOS
+-- ==========================================
+
+theme.bg_normal   = dark
+theme.bg_focus    = focus
+theme.bg_urgent   = red
+theme.bg_minimize = dark_green
+theme.bg_systray  = black
+
+theme.fg_normal   = green
+theme.fg_focus    = neon
+theme.fg_urgent   = white
+theme.fg_minimize = muted
+
+-- ==========================================
+-- BARRA DE ESCRITORIO
+-- ==========================================
+
+theme.wibar_bg = black
+theme.wibar_fg = neon
+
+-- ==========================================
+-- ESPACIADO Y BORDES
+-- ==========================================
+
+theme.useless_gap = dpi(3)
+
+theme.border_width        = dpi(2)
+theme.border_color_normal = "#12351b"
+theme.border_color_active = neon
+theme.border_color_marked = bright
+
+-- ==========================================
+-- ETIQUETAS / TAGLIST
+-- ==========================================
+
+theme.taglist_bg_normal   = dark
+theme.taglist_fg_normal   = muted
+
+theme.taglist_bg_focus    = focus
+theme.taglist_fg_focus    = neon
+
+theme.taglist_bg_urgent   = red
+theme.taglist_fg_urgent   = white
+
+theme.taglist_bg_occupied = dark_green
+theme.taglist_fg_occupied = green
+
+theme.taglist_bg_empty    = black
+theme.taglist_fg_empty    = muted
+
+theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
+    dpi(4), neon
+)
+
+theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
+    dpi(4), muted
+)
+
+-- ==========================================
+-- APLICACIONES ABIERTAS / TASKLIST
+-- ==========================================
+
+theme.tasklist_bg_normal = dark
+theme.tasklist_fg_normal = green
+
+theme.tasklist_bg_focus = focus
+theme.tasklist_fg_focus = neon
+
+theme.tasklist_bg_urgent = red
+theme.tasklist_fg_urgent = white
+
+-- ==========================================
+-- MENUS
+-- ==========================================
+
+theme.menu_bg_normal = dark
+theme.menu_fg_normal = green
+
+theme.menu_bg_focus = focus
+theme.menu_fg_focus = neon
+
+theme.menu_border_width = dpi(2)
+theme.menu_border_color = bright
+
+theme.menu_submenu_icon = themes_path .. "default/submenu.png"
+theme.menu_height = dpi(22)
+theme.menu_width = dpi(180)
+
+-- ==========================================
+-- NOTIFICACIONES
+-- ==========================================
+
+theme.notification_bg = dark
+theme.notification_fg = neon
+theme.notification_border_width = dpi(2)
+theme.notification_border_color = bright
+
+-- ==========================================
+-- TOOLTIP
+-- ==========================================
+
+theme.tooltip_bg = black
+theme.tooltip_fg = neon
+theme.tooltip_border_width = dpi(1)
+theme.tooltip_border_color = green
+
+-- ==========================================
+-- WALLPAPER
+-- ==========================================
+
+theme.wallpaper = os.getenv("HOME") .. "/background.png"
+
+-- ==========================================
+-- ICONOS DE BARRA DE TITULO
+-- ==========================================
+
+theme.titlebar_close_button_normal =
+    themes_path .. "default/titlebar/close_normal.png"
+
+theme.titlebar_close_button_focus =
+    themes_path .. "default/titlebar/close_focus.png"
+
+theme.titlebar_minimize_button_normal =
+    themes_path .. "default/titlebar/minimize_normal.png"
+
+theme.titlebar_minimize_button_focus =
+    themes_path .. "default/titlebar/minimize_focus.png"
+
+theme.titlebar_ontop_button_normal_inactive =
+    themes_path .. "default/titlebar/ontop_normal_inactive.png"
+
+theme.titlebar_ontop_button_focus_inactive =
+    themes_path .. "default/titlebar/ontop_normal_inactive.png"
+
+theme.titlebar_ontop_button_normal_active =
+    themes_path .. "default/titlebar/ontop_normal_active.png"
+
+theme.titlebar_ontop_button_focus_active =
+    themes_path .. "default/titlebar/ontop_normal_active.png"
+
+theme.titlebar_sticky_button_normal_inactive =
+    themes_path .. "default/titlebar/sticky_normal_inactive.png"
+
+theme.titlebar_sticky_button_focus_inactive =
+    themes_path .. "default/titlebar/sticky_normal_inactive.png"
+
+theme.titlebar_sticky_button_normal_active =
+    themes_path .. "default/titlebar/sticky_normal_active.png"
+
+theme.titlebar_sticky_button_focus_active =
+    themes_path .. "default/titlebar/sticky_normal_active.png"
+
+theme.titlebar_floating_button_normal_inactive =
+    themes_path .. "default/titlebar/floating_normal_inactive.png"
+
+theme.titlebar_floating_button_focus_inactive =
+    themes_path .. "default/titlebar/floating_normal_inactive.png"
+
+theme.titlebar_floating_button_normal_active =
+    themes_path .. "default/titlebar/floating_active.png"
+
+theme.titlebar_floating_button_focus_active =
+    themes_path .. "default/titlebar/floating_active.png"
+
+theme.titlebar_maximized_button_normal_inactive =
+    themes_path .. "default/titlebar/maximized_normal_inactive.png"
+
+theme.titlebar_maximized_button_focus_inactive =
+    themes_path .. "default/titlebar/maximized_normal_inactive.png"
+
+theme.titlebar_maximized_button_normal_active =
+    themes_path .. "default/titlebar/maximized_active.png"
+
+theme.titlebar_maximized_button_focus_active =
+    themes_path .. "default/titlebar/maximized_active.png"
+
+-- ==========================================
+-- ICONOS DE DISTRIBUCION
+-- ==========================================
+
+theme.layout_fairh = themes_path .. "default/layouts/fairhw.png"
+theme.layout_fairv = themes_path .. "default/layouts/fairvw.png"
+theme.layout_floating = themes_path .. "default/layouts/floatingw.png"
+theme.layout_magnifier = themes_path .. "default/layouts/magnifierw.png"
+theme.layout_max = themes_path .. "default/layouts/maxw.png"
+theme.layout_fullscreen = themes_path .. "default/layouts/fullscreenw.png"
+theme.layout_tilebottom = themes_path .. "default/layouts/tilebottomw.png"
+theme.layout_tileleft = themes_path .. "default/layouts/tileleftw.png"
+theme.layout_tile = themes_path .. "default/layouts/tilew.png"
+theme.layout_tiletop = themes_path .. "default/layouts/tiletopw.png"
+theme.layout_spiral = themes_path .. "default/layouts/spiralw.png"
+theme.layout_dwindle = themes_path .. "default/layouts/dwindlew.png"
+theme.layout_cornernw = themes_path .. "default/layouts/cornernww.png"
+theme.layout_cornerne = themes_path .. "default/layouts/cornernew.png"
+theme.layout_cornersw = themes_path .. "default/layouts/cornersww.png"
+theme.layout_cornerse = themes_path .. "default/layouts/cornersew.png"
+
+-- ==========================================
+-- ICONO OFICIAL SHIALEWEB
+-- ==========================================
+
+theme.awesome_icon = os.getenv("HOME") ..
+    "/.config/awesome/icons/matrix.png"
+
+theme.icon_theme = nil
+
+-- ==========================================
+-- NOTIFICACIONES CRITICAS
+-- ==========================================
+
+rnotification.connect_signal("request::rules", function()
+    rnotification.append_rule {
+        rule = { urgency = "critical" },
+        properties = {
+            bg = red,
+            fg = white
+        }
+    }
+end)
+
+return theme
+
+-- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8

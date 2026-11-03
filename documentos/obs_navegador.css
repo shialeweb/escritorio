@@ -1,0 +1,94 @@
+
+/* ==========================================
+   EL SHOW DE SHIALEWEB
+   YOUTUBE LIVE CHAT - OBS STUDIO
+   ========================================== */
+
+html, body {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* CONTENEDOR PRINCIPAL */
+yt-live-chat-renderer {
+    background: rgba(8, 12, 22, 0.96) !important;
+    border: 2px solid #00b7ff !important;
+    border-radius: 12px !important;
+}
+
+/* OCULTAR ENCABEZADO */
+yt-live-chat-header-renderer {
+    display: none !important;
+}
+
+/* OCULTAR CAJA DE ESCRITURA */
+yt-live-chat-message-input-renderer {
+    display: none !important;
+}
+
+/* OCULTAR MENSAJES DE PARTICIPACIÓN */
+yt-live-chat-viewer-engagement-message-renderer {
+    display: none !important;
+}
+
+/* MENSAJES DEL CHAT */
+yt-live-chat-text-message-renderer {
+    background: rgba(15, 23, 42, 0.75) !important;
+    border: 1px solid rgba(0, 183, 255, 0.35) !important;
+    border-radius: 8px !important;
+    margin: 5px 6px !important;
+    padding: 7px !important;
+}
+
+/* NOMBRES DE USUARIO */
+yt-live-chat-author-chip #author-name {
+    color: #00b7ff !important;
+    font-weight: bold !important;
+}
+
+/* TEXTO DE MENSAJES */
+yt-live-chat-text-message-renderer #message {
+    color: #ffffff !important;
+    font-size: 16px !important;
+}
+
+/* PROPIETARIO DEL CANAL */
+yt-live-chat-author-chip[is-owner] #author-name {
+    color: #ffcc00 !important;
+}
+
+/* MODERADORES */
+yt-live-chat-author-chip[is-moderator] #author-name {
+    color: #00ff88 !important;
+}
+
+/* SUPER CHAT */
+yt-live-chat-paid-message-renderer {
+    background: rgba(255, 204, 0, 0.15) !important;
+    border: 1px solid #ffcc00 !important;
+    border-radius: 8px !important;
+}
+
+/* MEMBRESÍAS */
+yt-live-chat-membership-item-renderer {
+    background: rgba(0, 183, 255, 0.15) !important;
+    border: 1px solid #00b7ff !important;
+    border-radius: 8px !important;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 7px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00b7ff !important;
+    border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: #080c16 !important;
+}
